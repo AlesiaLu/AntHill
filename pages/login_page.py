@@ -1,8 +1,9 @@
 #  method to create a Login-Page object
 # contains all basic methods to run on this page
 # ! we should provide browser and URL as parameters when creating an instance of that class
+# import time
 
-from pages.base_page import BasePage
+from .base_page import BasePage
 from locators.login_page_locators import LoginPageLocators
 
 

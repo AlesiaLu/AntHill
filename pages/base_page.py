@@ -16,7 +16,8 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)  # by that we open the specific website page that implements BasePage
 
-    def clear_text_field(self, element):  # method to clear any text field that has autofill
+    @staticmethod
+    def clear_text_field(element):  # method to clear any text field that has autofill
         if element:
             while element.get_attribute("value") != "":
                 element.send_keys(Keys.BACK_SPACE)

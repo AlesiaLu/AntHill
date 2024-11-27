@@ -1,0 +1,6 @@
+email_recipient = 'Сергей Сидоров'
+STARTING_LETTERS = 'сер'
+SUBJECT = 'Подготовка аналитической записки'
+EMAIL_TEXT = 'Сергей, добрый день!'
+NEW_TITLE = 'Аналитическая записка по конкуренту'
+IMAGE = 'C:/Users/julia/PycharmProjects/AntHill/image.png'

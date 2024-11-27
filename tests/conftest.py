@@ -2,10 +2,10 @@
 import os
 from dotenv import load_dotenv
 from datetime import datetime
-
 import pytest
 from selenium import webdriver
 
+import pages
 from pages.login_page import LoginPage
 
 load_dotenv()
@@ -26,9 +26,9 @@ def browser():
 
 @pytest.fixture()
 def client_login(browser):
-    """fixture to login in with CLIENT TEST credentials;
+    """fixture to log in in with CLIENT TEST credentials;
        starts from opening login page and finishes on the Mail page (which is a homepage by default)"""
-    login_page = LoginPage(browser, os.environ["BASE_LOGIN_URL"])
+    login_page = pages.login_page.LoginPage(browser, os.environ["BASE_LOGIN_URL"])
     login_page.open()
     login_page.enter_email(os.environ["VALID_LOGIN_CLIENT"])
     login_page.enter_password(os.environ["VALID_LOGIN_PASSWORD"])
